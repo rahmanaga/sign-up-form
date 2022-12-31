@@ -69,3 +69,20 @@ h3,
   font-size: 1.5rem;
   letter-spacing: 0.16rem;
 }
+
+@media (min-width: 767px) and (max-width: 991px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 467px) and (max-width: 767px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media (max-width: 467px) {
+  html {
+    font-size: 37.5%;
+  }
+}
