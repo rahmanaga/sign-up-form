@@ -35,7 +35,7 @@ body {
   margin-bottom: 5rem;
   gap: 15px;
 }
-.form-container p {
+.form-container > div > p {
   font-weight: 900;
   text-align: left;
   font-size: 2rem;
@@ -78,12 +78,30 @@ h3,
   border-radius: 5px;
   transition: 0.3s ease-in;
   font-weight: 600;
+  cursor: pointer;
 }
+
+.button-container {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
 .button-container button:hover {
   background-color: #7e582c;
   color: #fff;
   border-color: #c69749;
 }
+
+.form-container > form > p {
+  margin-left: 5rem;
+}
+
+.form-container a {
+  text-decoration: none;
+  color: #7e582c;
+  font-weight: 800;
+}
+
 @media (min-width: 767px) and (max-width: 991px) {
   html {
     font-size: 50%;
