@@ -66,10 +66,24 @@ h3,
 .form label {
   color: #222222;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 0.16rem;
 }
 
+.button-container button {
+  padding: 1.2rem 4rem;
+  color: #7e582c;
+  border-style: none;
+  border: 1px solid #7e582c;
+  border-radius: 5px;
+  transition: 0.3s ease-in;
+  font-weight: 600;
+}
+.button-container button:hover {
+  background-color: #7e582c;
+  color: #fff;
+  border-color: #c69749;
+}
 @media (min-width: 767px) and (max-width: 991px) {
   html {
     font-size: 50%;
