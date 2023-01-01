@@ -20,6 +20,7 @@ body {
   display: flex;
   height: 100%;
   font-size: 1.6rem;
+  background-color: #f9fafb;
 }
 
 .logo-container {
@@ -31,13 +32,13 @@ body {
   align-items: center;
 }
 
-.form-container {
+.form-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 65vw;
 }
-.form-container > div {
+.form-wrapper > div {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@ body {
   margin-bottom: 5rem;
   gap: 15px;
 }
-.form-container > div > p {
+.form-wrapper > div > p {
   font-weight: 900;
   text-align: left;
   font-size: 2rem;
@@ -64,6 +65,8 @@ h3,
   flex-wrap: wrap;
   column-gap: 2.5rem;
   width: min(70vw, 683px);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .form input {
@@ -91,6 +94,9 @@ h3,
   transition: 0.3s ease-in;
   font-weight: 600;
   cursor: pointer;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .button-container {
@@ -104,11 +110,7 @@ h3,
   border-color: #c69749;
 }
 
-.form-container > form > p {
-  margin-left: 5rem;
-}
-
-.form-container a {
+.form-wrapper a {
   text-decoration: none;
   color: #7e582c;
   font-weight: 800;
@@ -141,6 +143,18 @@ h3,
   color: #fff;
   font-size: 8rem;
   font-family: norse, sans-serif;
+}
+
+.form-container {
+  background-color: #fff;
+  padding-top: 2rem;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+.login {
+  margin-left: 5rem;
 }
 
 @media (min-width: 767px) and (max-width: 1037px) {
