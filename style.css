@@ -38,7 +38,7 @@ body {
   justify-content: center;
   width: 65vw;
 }
-.form-wrapper > div {
+.paragraphs {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,6 @@ h3,
   border-radius: 5px;
   border-style: none;
   border: 1px solid #b5d5c5;
-  flex: 1;
 }
 
 .form label {
@@ -163,9 +162,61 @@ h3,
   }
 }
 
-@media (min-width: 467px) and (max-width: 767px) {
+@media (max-width: 780px) {
   html {
-    font-size: 43.75%;
+    font-size: 50%;
+  }
+  body {
+    flex-direction: column;
+  }
+  .logo-container {
+    width: 100vw;
+    gap: 15px;
+  }
+  .logo {
+    width: 100vw;
+    margin-top: 2vh;
+  }
+  .form-wrapper {
+    margin: 1rem auto;
+    text-align: center;
+    width: 100vw;
+    align-items: center;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0 auto 2rem;
+    align-items: center;
+  }
+  form {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    margin: 0 auto 2rem;
+    padding-left: 0;
+    flex-direction: column;
+  }
+  .form input {
+    margin: 0 auto;
+  }
+  .paragraphs {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .button-container {
+    padding-bottom: 1.5rem;
+  }
+  .form > div,
+  h3,
+  .button-container {
+    padding-left: 0;
+  }
+  .login {
+    margin: 0 auto;
   }
 }
 @media (max-width: 467px) {
