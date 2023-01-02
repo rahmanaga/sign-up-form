@@ -43,27 +43,71 @@
           <div class="form">
             <div>
               <label for="fname">FIRST NAME</label>
-              <input type="text" id="fname" />
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                autocomplete="given-name"
+                title="Please enter your first name"
+                required
+              />
             </div>
             <div>
               <label for="lname">LAST NAME</label>
-              <input type="text" id="lname" />
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                autocomplete="family-name"
+                title="Please enter your last name"
+                required
+              />
             </div>
             <div>
               <label for="email">EMAIL</label>
-              <input type="email" id="email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                title="Please enter your e-mail"
+                required
+              />
             </div>
             <div>
               <label for="phone">PHONE NUMBER</label>
-              <input type="tel" id="phone" />
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                title="Please enter your phone number"
+                required
+              />
             </div>
             <div>
               <label for="password">PASSWORD</label>
-              <input type="password" id="password" />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                title="Please enter your password"
+                required
+              />
             </div>
             <div>
-              <label for="confirm_password">CONFIRM PASSWORD</label>
-              <input type="password" id="confirm_password" />
+              <label for="password-confirm">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                id="password-confirm"
+                name="password-confirm"
+                aria-labelledby="password-confirm-label"
+                title="Please re-enter your password"
+                autocomplete="off"
+                required
+              />
             </div>
           </div>
         </div>
