@@ -39,13 +39,19 @@
       </div>
       <form action="">
         <div class="form-container">
-          <h3>Let's do this</h3>
+          <h3>
+            Let's do this. Required fields are followed by
+            <span aria-label="required">*</span>.
+          </h3>
           <div class="form">
             <div>
-              <label for="fname">FIRST NAME</label>
+              <label for="fname"
+                >FIRST NAME<span aria-label="required">*</span></label
+              >
               <input
                 type="text"
                 id="fname"
+                maxlength="50"
                 name="fname"
                 autocomplete="given-name"
                 title="Please enter your first name"
@@ -53,10 +59,13 @@
               />
             </div>
             <div>
-              <label for="lname">LAST NAME</label>
+              <label for="lname"
+                >LAST NAME<span aria-label="required">*</span></label
+              >
               <input
                 type="text"
                 id="lname"
+                maxlength="50"
                 name="lname"
                 autocomplete="family-name"
                 title="Please enter your last name"
@@ -64,7 +73,9 @@
               />
             </div>
             <div>
-              <label for="email">EMAIL</label>
+              <label for="email"
+                >EMAIL<span aria-label="required">*</span></label
+              >
               <input
                 type="email"
                 id="email"
@@ -75,7 +86,7 @@
               />
             </div>
             <div>
-              <label for="phone">PHONE NUMBER</label>
+              <label for="phone">PHONE NUMBER (OPTIONAL)</label>
               <input
                 type="tel"
                 id="phone"
@@ -83,22 +94,30 @@
                 autocomplete="tel"
                 pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
                 title="Please enter your phone number"
-                required
               />
             </div>
             <div>
-              <label for="password">PASSWORD</label>
+              <label for="password"
+                >PASSWORD<span aria-label="required">*</span></label
+              >
               <input
                 type="password"
                 id="password"
                 name="password"
+                minlength="8"
                 autocomplete="new-password"
+                aria-describedby="password-minlength"
                 title="Please enter your password"
                 required
               />
+              <span id="password-minlength"
+                >Enter at least eight characters</span
+              >
             </div>
             <div>
-              <label for="password-confirm">CONFIRM PASSWORD</label>
+              <label for="password-confirm"
+                >CONFIRM PASSWORD<span aria-label="required">*</span></label
+              >
               <input
                 type="password"
                 id="password-confirm"
