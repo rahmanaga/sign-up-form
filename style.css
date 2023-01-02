@@ -10,6 +10,7 @@
     url("assets/fonts/norse-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 html {
   height: 100%;
@@ -136,6 +137,7 @@ h3,
 
 .logo img {
   max-height: 10rem;
+  width: auto;
 }
 
 .brand {
