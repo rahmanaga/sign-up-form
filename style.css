@@ -229,6 +229,10 @@ input:focus {
     text-align: center;
     padding-bottom: 1rem;
   }
+  .form-container h3 {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 }
 
 @media (pointer: fine) {
