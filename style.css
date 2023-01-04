@@ -207,7 +207,7 @@ input:focus {
     align-items: center;
   }
   .form > div {
-    width: 80%;
+    width: 100%;
   }
   input {
     width: 100%;
@@ -227,6 +227,7 @@ input:focus {
   }
   .login {
     text-align: center;
+    padding-bottom: 1rem;
   }
 }
 
