@@ -153,7 +153,9 @@ h3,
   -webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
-
+.form > div {
+  flex: 1;
+}
 .login {
   margin-left: 5rem;
 }
@@ -162,9 +164,14 @@ div > input {
   margin-bottom: 5px;
 }
 
-#password-minlength {
+input[aria-describedby="password-minlength"] + span {
   font-size: 1.3rem;
   color: #3e4b44;
+}
+
+.error-message {
+  font-size: 1.3rem;
+  color: #dc2020;
 }
 
 input:focus {
