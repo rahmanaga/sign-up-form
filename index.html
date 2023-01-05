@@ -55,8 +55,14 @@
                 name="fname"
                 autocomplete="given-name"
                 title="Please enter your first name"
+                aria-describedby="fname-validation"
                 required
               />
+              <span
+                id="fname-validation"
+                aria-live="assertive"
+                class="error-message"
+              ></span>
             </div>
             <div>
               <label for="lname"
@@ -69,8 +75,14 @@
                 name="lname"
                 autocomplete="family-name"
                 title="Please enter your last name"
+                aria-describedby="lname-validation"
                 required
               />
+              <span
+                id="lname-validation"
+                aria-live="assertive"
+                class="error-message"
+              ></span>
             </div>
             <div>
               <label for="email"
@@ -82,8 +94,14 @@
                 name="email"
                 autocomplete="email"
                 title="Please enter your e-mail"
+                aria-describedby="email-validation"
                 required
               />
+              <span
+                id="email-validation"
+                aria-live="assertive"
+                class="error-message"
+              ></span>
             </div>
             <div>
               <label for="phone">PHONE NUMBER (OPTIONAL)</label>
@@ -92,9 +110,16 @@
                 id="phone"
                 name="phone"
                 autocomplete="tel"
-                pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                maxlength="15"
+                minlength="8"
+                aria-describedby="phone-validation"
                 title="Please enter your phone number"
               />
+              <span
+                id="phone-validation"
+                aria-live="assertive"
+                class="error-message"
+              ></span>
             </div>
             <div>
               <label for="password"
@@ -125,8 +150,14 @@
                 aria-labelledby="password-confirm-label"
                 title="Please re-enter your password"
                 autocomplete="off"
+                aria-describedby="password-confirm-validation"
                 required
               />
+              <span
+                id="password-confirm-validation"
+                aria-live="assertive"
+                class="error-message"
+              ></span>
             </div>
           </div>
         </div>
