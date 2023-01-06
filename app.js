@@ -1,5 +1,55 @@
 const inputs = document.querySelectorAll("input:not(#password-confirm)");
+const confirmPassword = document.querySelector("#password-confirm");
+const passwordField = document.querySelector("#password");
 
+confirmPassword.addEventListener("blur", (e) => {
+  const targetField = document.querySelector(`#${e.target.id} + span`);
+  if (e.target.value.trim() === "") {
+    e.target.classList.remove("valid");
+    e.target.classList.add("invalid");
+    targetField.textContent = "Please re-enter yout password";
+  } else if (e.target.value !== passwordField.value) {
+    e.target.classList.remove("valid");
+    e.target.classList.add("invalid");
+    targetField.textContent = "Passwords don't match";
+  } else {
+    targetField.textContent = "";
+    e.target.classList.remove("invalid");
+    e.target.classList.add("valid");
+  }
+});
+
+confirmPassword.addEventListener("input", (e) => {
+  const targetField = document.querySelector(`#${e.target.id} + span`);
+  if (e.target.classList.contains("invalid")) {
+    if (
+      e.target.value.trim() !== "" &&
+      e.target.value === passwordField.value
+    ) {
+      targetField.textContent = "";
+      e.target.classList.remove("invalid");
+      e.target.classList.add("valid");
+    }
+  } else if (e.target.classList.contains("valid")) {
+    if (
+      e.target.value.trim() === "" ||
+      e.target.value !== passwordField.value
+    ) {
+      e.target.classList.remove("valid");
+      e.target.classList.add("invalid");
+      targetField.textContent = "Passwords don't match";
+    }
+  } else {
+    if (
+      e.target.value.trim() !== "" &&
+      e.target.value === passwordField.value
+    ) {
+      targetField.textContent = "";
+      e.target.classList.remove("invalid");
+      e.target.classList.add("valid");
+    }
+  }
+});
 inputs.forEach((input) => {
   input.addEventListener("blur", (e) => {
     if (e.target.validity.valid) {
