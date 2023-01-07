@@ -50,6 +50,24 @@ confirmPassword.addEventListener("input", (e) => {
     }
   }
 });
+
+passwordField.addEventListener("input", (e) => {
+  const targetField = document.querySelector("#password-confirm + span");
+  if (confirmPassword.classList.contains("valid")) {
+    if (e.target.value !== confirmPassword.value) {
+      confirmPassword.classList.remove("valid");
+      confirmPassword.classList.add("invalid");
+      targetField.textContent = "Passwords don't match";
+    }
+  } else if (confirmPassword.classList.contains("invalid")) {
+    if (e.target.value === confirmPassword.value) {
+      confirmPassword.classList.remove("invalid");
+      confirmPassword.classList.add("valid");
+      targetField.textContent = "";
+    }
+  }
+});
+
 inputs.forEach((input) => {
   input.addEventListener("blur", (e) => {
     if (e.target.validity.valid) {
