@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll("input:not(#password-confirm)");
 const confirmPassword = document.querySelector("#password-confirm");
 const passwordField = document.querySelector("#password");
+const phoneField = document.querySelector("#phone");
 
 confirmPassword.addEventListener("blur", (e) => {
   const targetField = document.querySelector(`#${e.target.id} + span`);
@@ -124,4 +125,19 @@ inputs.forEach((input) => {
       }
     }
   });
+});
+
+phoneField.addEventListener("input", (e) => {
+  const targetField = document.querySelector(`#${e.target.id} + span`);
+  const regex = /\+?([0-9]){8,15}/;
+  if (regex.test(e.target.value.replaceAll("-", ""))) {
+    e.target.classList.remove("invalid");
+    e.target.classList.add("valid");
+  } else {
+    if (e.target.classList.contains("valid") && e.target.value !== "") {
+      e.target.classList.remove("valid");
+      e.target.classList.add("invalid");
+      targetField.textContent = "Please enter a valid phone number";
+    }
+  }
 });
